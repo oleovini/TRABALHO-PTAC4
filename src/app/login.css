@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+
+body{
+    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/walppaper.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+*{
+    font-family: 'Oswald', sans-serif;
+
+}
+h1{
+    text-transform: uppercase;
+}
+
+.principal{
+   
+    width: 50vh;
+    background: rgba(255, 255, 255, 0.355);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+input{
+    margin-bottom: 2vh;
+}
+.inpts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
