@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './login.css'
-import Image from 'next/image';
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -27,16 +26,8 @@ export default function Login() {
     }
   }
   return (
-    <div className="principal">
-
-
-                <Image
-                    src="/background.jpg"
-                    alt="background image"
-                    fill
-                />
-
-
+    <div className="tudo">
+      <div className="principal">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
         <div className="inpts" >
@@ -58,6 +49,7 @@ export default function Login() {
           </a>
       </form>
       <ToastContainer/>
+    </div>
     </div>
   )
 }

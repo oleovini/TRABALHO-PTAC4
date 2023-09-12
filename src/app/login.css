@@ -2,15 +2,30 @@
 
 
 
-body{
+html{
+    height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/walppaper.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
-  
 }
+
 *{
+    color: white;
     font-family: 'Oswald', sans-serif;
 
+}
+input{
+    width:10vw;
+    background-color: rgba(133, 38, 133, 0);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    border-bottom: 2px solid rgba(133, 38, 133, 0.518);
+}
+
+button{
+    color: black;
 }
 h1{
     text-transform: uppercase;
@@ -19,7 +34,7 @@ h1{
 .principal{
    
     width: 50vh;
-    background: rgba(255, 255, 255, 0.355);
+    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     margin: auto;
     display: flex;
     flex-direction: column;
