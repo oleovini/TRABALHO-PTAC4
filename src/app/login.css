@@ -17,17 +17,22 @@ html{
 form{
     text-align: center;
 }
-form  button{
-    color: black;
-}
+
 input{
-    width:10vw;
-    background-color: rgba(133, 38, 133, 0);
+    color: rgb(132, 0, 255);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 4vh;
+    width:20vh;
+    background-color: rgba(133, 38, 133, 0.098);
     border-left: none;
     border-right: none;
     border-top: none;
     outline: none;
     border-bottom: 2px solid rgba(133, 38, 133, 0.518);
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.269);
 }
 
 h1{
@@ -35,8 +40,7 @@ h1{
 }
 
 .principal{
-   
-    width: 50vh;
+    border-radius: 20px;
     background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     margin: auto;
     display: flex;
@@ -45,11 +49,51 @@ h1{
     margin-top: 25vh;
 }
 
-input{
-    margin-bottom: 2vh;
-}
 .inpts{
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+button{
+    cursor: pointer;
+    width: 20vh;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+
+    background-image: linear-gradient(to right, #8c62f5, #e403d5, #f571fa, #9219e8);
+    box-shadow: 0 4px 15px 0 rgba(65, 10, 229, 0.342);
+}
+
+button:hover{
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+button:focus{
+outline: none
+}
+.card{
+    height: 360px;
+    width: 300px;
+    position: relative;
+}
+.card::before{
+content: '';
+position: absolute;
+width: 150px;
+height: 140%;
+background-image: linear-gradient(
+    180deg,
+    #865dff,
+    #e384ff
+);
+animation: rotate 3s linear infinite;
 }

@@ -27,19 +27,19 @@ export default function Login() {
   }
   return (
     <div className="tudo">
-      <div className="principal">
+      <div className="principal card">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
         <div className="inpts" >
-        <label for="">E-mail</label>
-        <input type="email"
+        <label for="" >E-mail</label>
+        <input type="email" placeholder="joaodossantos@gmail.com"
           onChange={(e) => { setUser({ ...user, email: e.target.value }) }}
         />
         
         </div>
         <div className="inpts" >
        <label for="">Senha</label> 
-        <input type='password'
+        <input type='password' placeholder="*******"
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}
         />
         
