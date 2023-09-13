@@ -21,6 +21,7 @@ form{
 input{
     color: rgb(132, 0, 255);
     text-align: center;
+    letter-spacing: 2px;
     text-decoration: none;
     margin-bottom: 4vh;
     width:20vh;
@@ -41,11 +42,7 @@ h1{
 
 .principal{
     border-radius: 20px;
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 25vh;
 }
 
@@ -81,19 +78,38 @@ button:focus{
 outline: none
 }
 .card{
+    background: #030029;
     height: 360px;
     width: 300px;
     position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+h1,form{
+    z-index: 2;
 }
 .card::before{
-content: '';
+content: "";
 position: absolute;
 width: 150px;
 height: 140%;
 background-image: linear-gradient(
     180deg,
     #865dff,
-    #e384ff
+    #e284ff
 );
 animation: rotate 3s linear infinite;
+}
+.card::after{
+    content: "" ;
+    position: absolute;
+    inset: 3px;
+    background: #030029;
+    border-radius: inherit;
+}
+@keyframes rotate{
+    100%{
+        rotate: 360deg;
+    }
 }
