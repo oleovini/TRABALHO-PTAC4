@@ -4,7 +4,7 @@ import handlerAcessUser from "./functions/handlerAcess"
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import './login.css'
+import './pages/styles/login.css';
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -24,7 +24,21 @@ export default function Login() {
     } catch {
       toast.error("erro na aplicação")
     }
+  };
+
+  function recarregarPagina() {
+    location.reload();
   }
+  
+ 
+const bt = document.getElementById('btt');
+if (bt) {
+  bt.addEventListener('click', function() {
+    recarregarPagina();
+  });
+}
+
+
   return (
     <div className="tudo">
       <div className="principal card">
@@ -44,8 +58,8 @@ export default function Login() {
         />
         
         </div>
-          <a>
-          <button>Entrar</button>
+          <a href="/">
+          <button id="bt">Entrar</button>
           </a>
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />

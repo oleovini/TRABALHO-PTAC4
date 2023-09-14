@@ -126,3 +126,7 @@ button.Toastify__close-button{
 .Toastify__toast-icon{
     margin-top: 3px;
 }
+
+a{
+    text-decoration: none;
+}
