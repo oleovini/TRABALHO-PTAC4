@@ -58,9 +58,8 @@ if (bt) {
         />
         
         </div>
-          <a href="/">
+         
           <button id="bt">Entrar</button>
-          </a>
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
     </div>
