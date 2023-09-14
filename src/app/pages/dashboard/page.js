@@ -10,21 +10,21 @@ export default async function Dashboard() {
 
     const users = await getUsers();
     return (
-        <div className="tudo">
-            
+        <div>
+
             <div className="n-bar">
-                <a href="#">   <div>Home</div>     </a>
+                <a href="#">   <div className="links">Home</div>     </a>
 
-                <a href="#">   <div>Register</div> </a>
+                <a href="#">   <div className="links">Register</div> </a>
 
-                <a href="#">   <div>Modify</div>   </a>
+                <a href="#">   <div className="links">Modify</div>   </a>
 
-                <a href="#">   <div>Out</div>      </a>'
+                <a href="#">   <div className="links">Out</div>      </a>'
 
             </div>
 
             <h1>Home</h1>
-            <div className="user-list, card">
+            <div className="user-list">
                 {users?.map((user, index) =>
                     <p key={index}>
                         {user.name}

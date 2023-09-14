@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
 html{
@@ -26,9 +25,21 @@ html{
     margin: auto;
 }
 a{
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    background-color: rgb(86, 50, 180);
     width:5vw;
     text-align: center;
+
+}
+a:hover{
+    background-color: #03002977;
+    transition: all .3s ease-in-out;
+
+}
+
+.links{
+    margin-top: 0.5vw;
+}
+.links:hover{
+    transition: all .3s ease-in-out;
+    color: rgb(255, 140, 0);
 }
