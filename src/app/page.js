@@ -26,18 +26,6 @@ export default function Login() {
     }
   };
 
-  function recarregarPagina() {
-    location.reload();
-  }
-  
- 
-const bt = document.getElementById('btt');
-if (bt) {
-  bt.addEventListener('click', function() {
-    recarregarPagina();
-  });
-}
-
 
   return (
     <div className="tudo">
@@ -59,7 +47,7 @@ if (bt) {
         
         </div>
          
-          <button id="bt">Entrar</button>
+          <button>Entrar</button>
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
     </div>
