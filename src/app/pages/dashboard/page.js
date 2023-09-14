@@ -1,7 +1,7 @@
 import { getUsers } from "@/app/functions/handlerAcessAPI";
-import '../styles/dashboard.css'
+import '../styles/dashboard.css';
 
-
+const abrirnav = document.querySelector('button');
 
 
 export default async function Dashboard() {
@@ -12,17 +12,23 @@ export default async function Dashboard() {
     return (
         <div>
 
-            <div className="n-bar">
-                <a href="#">   <div className="links">Home</div>     </a>
+            <div className="button">
 
-                <a href="#">   <div className="links">Register</div> </a>
+            <div className="n-bar" id="nbar">
+                  <div><span><img className="logo" src="../logo.png"/></span></div>
 
-                <a href="#">   <div className="links">Modify</div>   </a>
+                <a href="#">   <div className="links">Inicio</div>     </a>
 
-                <a href="#">   <div className="links">Out</div>      </a>'
+                <a href="#">   <div className="links">Registrar</div> </a>
+
+                <a href="#">   <div className="links">Alterar</div>   </a>
+
+                <a href="#" className="out">   <div className="links">Sair</div></a>
 
             </div>
 
+                <button className="btnavbar">Nav</button>
+            </div>
             <h1>Home</h1>
             <div className="user-list">
                 {users?.map((user, index) =>

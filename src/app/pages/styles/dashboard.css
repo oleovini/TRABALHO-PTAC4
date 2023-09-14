@@ -2,27 +2,31 @@
 
 
 html{
-    height: 100vh;
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/walppaper.jpg') ;
+    height: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/walppaper.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 *{
+    margin: 0;
+    padding: 0;
     color: white;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
+
 }
 
 
 .n-bar{
+    visibility: hidden;
+    position: fixed;
     margin-top: none;
-    height: 5vh;
-    background: #03002977;
+    height: 4vh;
+    background-image: linear-gradient(to left, rgba(0, 128, 0, 0), rgba(0, 0, 0, 0.31),rgba(0, 0, 0, 0.31), rgba(0, 128, 0, 0));
     display: flex;
     justify-content: space-around;
-    width: 50%;
-    margin: auto;
+    width: 100%;
 }
 a{
     text-decoration: none;
@@ -37,9 +41,20 @@ a:hover{
 }
 
 .links{
-    margin-top: 0.5vw;
+    margin-top: 0.3vw;
 }
 .links:hover{
     transition: all .3s ease-in-out;
-    color: rgb(255, 140, 0);
+    color: rgb(172, 0, 117);
+}
+
+.out{
+   background: rgba(255, 0, 0, 0.485);
+}
+.out:hover{
+    background:  rgba(152, 0, 0, 0.485);
+}
+
+.logo{
+    width: 10vh;
 }
