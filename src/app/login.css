@@ -79,7 +79,7 @@ outline: none
 }
 .card{
     background: #030029;
-    height: 360px;
+    height: 36vh;
     width: 300px;
     position: relative;
     display: grid;
@@ -113,3 +113,5 @@ animation: rotate 3s linear infinite;
         rotate: 360deg;
     }
 }
+
+
