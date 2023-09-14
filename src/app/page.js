@@ -18,7 +18,7 @@ export default function Login() {
     try {
   const userAuth =await handlerAcessUser(user);
   if(userAuth.token === undefined){
-    toast.error("erro no user ou na senha ");
+    toast.error(<span className="spanz">Erro no e-mail ou senha</span>);
   }
   push('/pages/dashboard')
     } catch {
@@ -32,7 +32,7 @@ export default function Login() {
       <form onSubmit={handlerLogin}>
         <div className="inpts" >
         <label for="" >E-mail</label>
-        <input type="email" placeholder="joaodossantos@gmail.com"
+        <input type="email" placeholder="joaodasilva@gmail.com"
           onChange={(e) => { setUser({ ...user, email: e.target.value }) }}
         />
         
@@ -48,7 +48,7 @@ export default function Login() {
           <button>Entrar</button>
           </a>
       </form>
-      <ToastContainer toastStyle={{ backgroundColor: "#030029" }} />
+      <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
     </div>
     </div>
   )

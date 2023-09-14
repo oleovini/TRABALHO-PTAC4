@@ -61,7 +61,6 @@ button{
     color: white;
     background-size: 300% 100%;
     transition: all .4s ease-in-out;
-
     background-image: linear-gradient(to right, #8c62f5, #e403d5, #f571fa, #9219e8);
     box-shadow: 0 4px 15px 0 rgba(65, 10, 229, 0.342);
 }
@@ -114,4 +113,16 @@ animation: rotate 3s linear infinite;
     }
 }
 
-
+button.Toastify__close-button{
+    width: 4vh;
+    border-radius: 100px;
+    background-color: #030029;
+    box-shadow: none;
+}
+.spanz{
+    color: #E74C3C;
+    font-weight: bold;
+}
+.Toastify__toast-icon{
+    margin-top: 3px;
+}
