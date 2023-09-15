@@ -8,7 +8,7 @@ export const middleware = (request) => {
     const urlLogin = new URL('/', request.url);
     const urlBlock = new URL('/pages/dashboard', request.url)
     const urlBlockRegister = new URL('/pages/registrar', request.url)
-    const urlBlockAlter = new URL('/pages/alter', request.url)
+    const urlBlockAlter = new URL('/pages/alterar', request.url)
     const isTokenValidated = validateToken(token);
 
     if (!isTokenValidated || !token) {
@@ -18,7 +18,7 @@ export const middleware = (request) => {
     }
 
     if (!isTokenValidated || !token) {
-        if (request.nextUrl.pathname === '/pages/alter') {
+        if (request.nextUrl.pathname === '/pages/alterar') {
             return NextResponse.redirect(urlLogin);
         }
     }
@@ -49,6 +49,6 @@ export const middleware = (request) => {
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard', '/pages/registrar']
+    matcher: ['/', '/pages/dashboard', '/pages/registrar', '/pages/alterar']
 };
 

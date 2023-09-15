@@ -47,7 +47,7 @@ export default function Login() {
         
         </div>
          
-          <button>Entrar</button>
+          <button className="entrar-button">Entrar</button>
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
     </div>

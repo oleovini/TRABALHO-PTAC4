@@ -1,0 +1,33 @@
+.altera-user{
+display: grid;
+margin-top: 5%;
+justify-content: center;
+text-align: center;
+
+}
+.p-alterar{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 3vw;
+  width: 25vw;
+  border-bottom: .5px solid rgba(11, 0, 28, 0.464);
+
+}
+
+
+.bt-alterar{
+  height: 2vw;
+  width: 6vw;
+  background:rgba(22, 22, 22, 0.727);
+  border: none;
+  cursor: pointer;
+  margin-left: 2vw;
+  transition: ease-in-out all .4s;
+  border-radius: 5px;
+}
+.alterar:hover{
+  background: rgb(0, 0, 79);
+}
+.excluir:hover{
+  background: rgb(120, 0, 1);
+}
