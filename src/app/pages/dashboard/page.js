@@ -1,35 +1,17 @@
+import 'react-toastify/dist/ReactToastify.css';
 import { getUsers } from "@/app/functions/handlerAcessAPI";
 import '../styles/dashboard.css';
-
-const abrirnav = document.querySelector('button');
-
+import Nav from "../components/Navbar";
 
 export default async function Dashboard() {
-    const req = await fetch("http://localhost:3000/pages/dashboard", {
-    cache: "no-cache"});
-
     const users = await getUsers();
     return (
         <div>
-
-            <div className="button">
-
-            <div className="n-bar" id="nbar">
-                  <div><span><img className="logo" src="../logo.png"/></span></div>
-
-                <a href="#">   <div className="links">Inicio</div>     </a>
-
-                <a href="#">   <div className="links">Registrar</div> </a>
-
-                <a href="#">   <div className="links">Alterar</div>   </a>
-
-                <a href="#" className="out">   <div className="links">Sair</div></a>
-
+            <div className="btbt">
+                 <Nav/>
             </div>
-
-                <button className="btnavbar">Nav</button>
-            </div>
-            <h1>Home</h1>
+           <div className='homeclass'>
+           <h1 className='txth1'>Lista de Usuários</h1>
             <div className="user-list">
                 {users?.map((user, index) =>
                     <p key={index}>
@@ -37,6 +19,8 @@ export default async function Dashboard() {
                     </p>
                 )}
             </div>
+
+           </div>
         </div>
     );
 };
