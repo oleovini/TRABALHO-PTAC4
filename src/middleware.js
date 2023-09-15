@@ -7,7 +7,7 @@ export const middleware = (request) => {
     const token = request.cookies.get('token')?.value;
     const urlLogin = new URL('/', request.url);
     const urlBlock = new URL('/pages/dashboard', request.url)
-    const urlBlockRegister = new URL('/pages/register', request.url)
+    const urlBlockRegister = new URL('/pages/registrar', request.url)
     const urlBlockAlter = new URL('/pages/alter', request.url)
     const isTokenValidated = validateToken(token);
 
@@ -24,7 +24,7 @@ export const middleware = (request) => {
     }
 
     if (!isTokenValidated || !token) {
-        if (request.nextUrl.pathname === '/pages/register') {
+        if (request.nextUrl.pathname === '/pages/registrar') {
             return NextResponse.redirect(urlLogin);
         }
     }
@@ -49,6 +49,6 @@ export const middleware = (request) => {
     NextResponse.next();
 };
 export const config = {
-    matcher: ['/', '/pages/dashboard']
+    matcher: ['/', '/pages/dashboard', '/pages/registrar']
 };
 
