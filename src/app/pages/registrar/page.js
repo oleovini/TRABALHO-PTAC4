@@ -33,7 +33,6 @@ export default async function Registro() {
           <input id='passwd' type='password' placeholder="*******"/>
           
           </div>
-          
            
             <button className="entrar-button">Entrar</button>
         </form>
