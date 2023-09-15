@@ -9,7 +9,7 @@ export default async function Alterar() {
         <p className='p-alterar' key={index}>
             {user.name}: 
             <button className='bt-alterar alterar'>Alterar</button>
-            <button onClick={toast.success('Exlusão Realizada') } className='bt-alterar excluir'>Excluir</button>
+            <button className='bt-alterar excluir'>Excluir</button>
         </p>
       )}
         <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
