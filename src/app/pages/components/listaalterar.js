@@ -8,8 +8,7 @@ export default async function Alterar() {
       {users?.map((user, index) =>
         <p className='p-alterar' key={index}>
             {user.name}: 
-            <button className='bt-alterar alterar'>Alterar</button>
-            <button className='bt-alterar excluir'>Excluir</button>
+            <button className='bt-alterar alterar'><a href="/pages/alteraruser">Alterar</a></button>
         </p>
       )}
         <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
