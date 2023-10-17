@@ -13,7 +13,8 @@ const getUserAuthenticated = async (user) => {
         body: JSON.stringify(user)
     }
     )
-
+    const useAuth = await responseOfApi.json();
+    return useAuth; 
    // let userAuth = {}
    // for (let i = 0; i < users.length; i++) {
    //     if(users[i].email === user.email && users[i].password === user.password) 
