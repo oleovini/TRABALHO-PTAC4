@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { validateToken } from "./app/functions/validateToken";
 
-export const middleware = (request) => {
+export const middleware = async(request) => {
 
     const token = request.cookies.get('token')?.value;
     const urlLogin = new URL('/', request.url);
@@ -10,7 +10,7 @@ export const middleware = (request) => {
     const urlBlockRegister = new URL('/pages/registrar', request.url)
     const urlBlockAlter = new URL('/pages/alterar', request.url)
     const urlBlockAlterU = new URL('/pages/alteraruser', request.url)
-    const isTokenValidated = validateToken(token);
+    const isTokenValidated = await validateToken(token);
 
     if (!isTokenValidated || !token) {
         if (request.nextUrl.pathname === '/pages/dashboard') {
