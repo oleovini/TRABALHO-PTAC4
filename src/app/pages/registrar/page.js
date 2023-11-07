@@ -1,17 +1,31 @@
 'use client'
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/register.css'
-import Nav from '../components/Navbar'
+import '../styles/register.css';
+import Nav from '../components/Navbar';
 
 export default function Login() {
+  const [user, setUser] = useState({
+    name:'',
+    email: '',
+    password: '',
+  });
+  const { push} = useRouter();
 
+  const handlerFormSubmit = async (event) =>{
+    event.preventDefault();
+    try{
+      await postUser(user);
+      await new Promise((resolve) =>{
+        toast.success('Usuário cadastrado com sucesso');
+        setTimeout(resolve, 5000)
+      });
+      return push("/pages/dashboard")
+    } catch{
+      return toast.error("Erro")
+    }
+  }
 
-  const registrar = (e) => {
-    e.preventDefault();
-    toast.success('Usuário alterado com sucesso');
-
-   }
 
   return (
     <div className="tudo">

@@ -11,7 +11,7 @@ export default function Login() {
     email: '',
     password: '',
   });
-  const { push, refresh } = useRouter();
+  const { push} = useRouter();
 
   const handlerLogin = async (e) => {
     e.preventDefault();
