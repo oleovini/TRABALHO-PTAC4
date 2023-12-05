@@ -46,4 +46,6 @@ const postUser = async (user) => {
 
 
 
+
+
 export { getUsers, getUserAuthenticated, postUser };

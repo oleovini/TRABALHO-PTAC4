@@ -2,6 +2,8 @@
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/register.css';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Nav from '../components/Navbar';
 
 export default function Login() {
@@ -26,6 +28,12 @@ export default function Login() {
     }
   }
 
+  const registrar = (e) => {
+    e.preventDefault();
+    toast.success('Usuário registrado com sucesso');
+
+   }
+
 
   return (
     <div className="tudo">
@@ -35,21 +43,22 @@ export default function Login() {
       <form onSubmit={registrar}>
       <div className="inpts" >
        <label for="">Nome</label> 
-        <input type='text' placeholder="John Doe"/>
+        <input type='text' placeholder="John Doe" required onChange={(event) => { setUser({ ...user, name: event.target.value })}}/>
         
         </div>
          
         <div className="inpts" >
         <label for="" >E-mail</label>
-        <input type="email" placeholder="johndoe@gmail.com"/>
+        <input type="email" placeholder="johndoe@gmail.com" required onChange={(event) => { setUser({ ...user, email: event.target.value })}}/>
         
         </div>
         <div className="inpts" >
        <label for="">Senha</label> 
-        <input type='password' placeholder="*******"/>
+        <input type='password' placeholder="*******" required onChange={(event) => { setUser({ ...user, password: event.target.value })}}/>
         
         </div>
-          <button className="entrar-button">Entrar</button>
+        <input type="submit" value="Cadastrar" />
+        
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
     </div>
