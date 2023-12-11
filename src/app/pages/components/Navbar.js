@@ -24,8 +24,6 @@ export default function Naavbar() {
 
   <a href="/pages/registrar">   <div className="links">Registrar</div> </a>
 
-  <a href="/pages/alterar">   <div className="links">Alterar</div>   </a>
-
   <a href="#" className="out">   <div className="links"><button className="sem-estilo" onClick={handlerRemoveCookies}>Sair</button></div></a>
 
 
