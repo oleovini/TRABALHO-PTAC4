@@ -18,7 +18,7 @@ export default function Naavbar() {
 
   return(
     <div className="n-bar" id="nbar">
-    <div><span><img className="logo" src="../logo.png"/></span></div>
+    <div><span><img className="logo" src="../../logo.png"/></span></div>
 
   <a href="/">   <div className="links">Inicio</div>     </a>
 

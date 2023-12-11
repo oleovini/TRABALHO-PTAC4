@@ -1,10 +1,10 @@
 'use client'
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/register.css';
+import '../../styles/alterar.css';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Nav from '../components/Navbar';
+import Nav from '../../components/Navbar';
 
 export default function Alterar({puxaid}) {
   const [user, setUser] = useState({
@@ -36,7 +36,7 @@ export default function Alterar({puxaid}) {
     <div className="tudo">
       <Nav/>
       <div className="principal card">
-      <h1>Registrar Usuário</h1>
+      <h1>Alterar Usuário</h1>
       <form onSubmit={HandlerFormSubmit}>
       <div className="inpts" >
        <label for="">Nome</label> 
@@ -54,7 +54,7 @@ export default function Alterar({puxaid}) {
         <input type='password' placeholder="*******" required onChange={(event) => { setUser({ ...user, password: event.target.value })}}/>
         
         </div>
-        <input type="submit" value="Cadastrar" />
+        <input type="submit" value="Alterar" />
         
       </form>
       <ToastContainer toastStyle={{backgroundColor:"#030029"}} />
