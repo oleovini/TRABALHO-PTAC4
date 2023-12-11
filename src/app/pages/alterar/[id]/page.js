@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/alterar.css';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { updateUser } from '@/app/functions/handlerAcessAPI';
 import Nav from '../../components/Navbar';
 
 export default function Alterar({puxaid}) {
