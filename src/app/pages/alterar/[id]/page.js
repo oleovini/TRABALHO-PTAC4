@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Nav from '../components/Navbar';
 
-export default function Login() {
+export default function Alterar({puxaid}) {
   const [user, setUser] = useState({
     name:'',
     email: '',
@@ -14,25 +14,22 @@ export default function Login() {
   });
   const { push} = useRouter();
 
-  const handlerFormSubmit = async (event) =>{
-    event.preventDefault();
+
+  const HandlerFormSubmit =  async (e) => {
+    e.preventDefault();
     try{
-      await postUser(user);
-      await new Promise((resolve) =>{
-        toast.success('Usuário cadastrado com sucesso');
-        setTimeout(resolve, 5000)
-      });
-      return push("/pages/dashboard")
-    } catch{
-      return toast.error("Erro")
+        await updateUser(user, puxaid.id);
+        await new Promise((resolve) => {
+            toast.success("Usuário alterado com sucesso!!")
+            setTimeout(resolve, 5000)
+        });
+        return push("/pages/dashboard")
+    }
+    
+    catch{
+        return toast.error("Erro a alterar o usuário")
     }
   }
-
-  const registrar = (e) => {
-    e.preventDefault();
-    toast.success('Usuário registrado com sucesso');
-
-   }
 
 
   return (
@@ -40,10 +37,10 @@ export default function Login() {
       <Nav/>
       <div className="principal card">
       <h1>Registrar Usuário</h1>
-      <form onSubmit={registrar}>
+      <form onSubmit={HandlerFormSubmit}>
       <div className="inpts" >
        <label for="">Nome</label> 
-        <input type='text' placeholder="John Doe" required onChange={(event) => { setUser({ ...user, name: event.target.value })}}/>
+        <input type='text' placeholder="John Doe" required onChange={(e) => { setUser({ ...user, name: e.target.value })}} />
         
         </div>
          
