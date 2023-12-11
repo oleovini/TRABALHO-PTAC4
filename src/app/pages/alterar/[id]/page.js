@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { updateUser } from '@/app/functions/handlerAcessAPI';
 import Nav from '../../components/Navbar';
 
-export default function Alterar({puxaid}) {
+export default function Alterar({params}) {
   const [user, setUser] = useState({
     name:'',
     email: '',
@@ -19,7 +19,9 @@ export default function Alterar({puxaid}) {
   const HandlerFormSubmit =  async (e) => {
     e.preventDefault();
     try{
-        await updateUser(user, puxaid.id);
+        console.log("Deu Bom?")
+        await updateUser(user, params.id);
+        
         await new Promise((resolve) => {
             toast.success("Usuário alterado com sucesso!!")
             setTimeout(resolve, 5000)
