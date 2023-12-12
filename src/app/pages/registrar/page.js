@@ -4,9 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../styles/register.css';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { postUser } from "@/app/functions/handlerAcessAPI";
 import Nav from '../components/Navbar';
 
-export default function Login() {
+export default function registrar() {
   const [user, setUser] = useState({
     name:'',
     email: '',
@@ -27,20 +28,12 @@ export default function Login() {
       return toast.error("Erro")
     }
   }
-
-  const registrar = (e) => {
-    e.preventDefault();
-    toast.success('Usuário registrado com sucesso');
-
-   }
-
-
   return (
     <div className="tudo">
       <Nav/>
       <div className="principal card">
       <h1>Registrar Usuário</h1>
-      <form onSubmit={registrar}>
+      <form onSubmit={handlerFormSubmit}>
       <div className="inpts" >
        <label for="">Nome</label> 
         <input type='text' placeholder="John Doe" required onChange={(event) => { setUser({ ...user, name: event.target.value })}}/>
